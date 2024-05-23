@@ -10,12 +10,13 @@ import userRoutes from "./routes/user.routes.js";
 import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
 
-const PORT = process.env.PORT || 5000;
+
 
 dotenv.config();
+const PORT = process.env.PORT || 5000;
 
 const __dirname = path.resolve();
-// PORT should be assigned after calling dotenv.config() because we need to access the env variables. Didn't realize while recording the video. Sorry for the confusion.
+
 
 
 app.use(express.json()); // to parse the incoming requests with JSON payloads (from req.body)
